@@ -1,0 +1,13 @@
+apiVersion: V1
+kind: Service 
+metadata:
+  name: application
+specs:
+  selector:
+    application : application
+  ports:
+    protocol: TCP
+    port: 80
+    targetport: 5000
+      
+

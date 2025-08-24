@@ -1,0 +1,19 @@
+apiVersion: application/V1
+kind: deployement
+metadata:
+  name: application
+specs:
+  replicas: 3  # Number of pod replicas
+  selector:
+    matchLabels:
+      application: application
+  template:
+    metadata:
+      labels:
+      application: application   
+    spec:
+      containers:
+        - name: application-container
+          image: dubeyaakriti0804/application:latest   # your Docker image
+          ports:
+            - containerPort: 5000      
